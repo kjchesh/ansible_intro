@@ -1,0 +1,12 @@
+---
+  - hosts: 127.0.0.1
+    connection: local
+    gather_facts: no
+    become: no
+    tasks:
+
+    - name: stop the VM
+      shell: limactl stop focal
+    - name: destroy the VM
+      shell: limactl delete focal
+...
